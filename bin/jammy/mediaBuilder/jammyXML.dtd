@@ -1,0 +1,14 @@
+<!ELEMENT MediaCatalog (Media*)>
+<!ELEMENT Media (FolderEntry*,FileEntry*)>
+	<!ATTLIST Media typeCode CDATA #REQUIRED>
+	<!ATTLIST Media mediaName CDATA #REQUIRED>
+	<!ATTLIST Media discName CDATA>
+	<!ATTLIST Media size CDATA "0">
+<!ELEMENT FolderEntry (FolderEntry*,FileEntry*)>
+	<!ATTLIST FolderEntry name CDATA #REQUIRED>
+	<!ATTLIST FolderEntry path CDATA #REQUIRED>
+	<!ATTLIST FolderEntry size CDATA "0">
+<!ELEMENT FileEntry>
+	<!ATTLIST FileEntry name CDATA #REQUIRED>
+	<!ATTLIST FileEntry path CDATA #REQUIRED>
+	<!ATTLIST FileEntry size CDATA #REQUIRED "0" >
